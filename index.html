@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <audio id="myaudio" autoplay="autoplay" loop="loop" preload="auto" src="./aespa 에스파 'Spicy' MV.mp3"></audio>
+    <div class="overlay1">
+        <div class="container">
+            <div class="profile">
+                <img src="me.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="overlay">
+                    <a href="./about.html" class="blog-link">My Blog ➜</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 獲取音頻元素
+        var audioElement = document.getElementById('myaudio');
+        audioElement.volume = 0.05; // 音量範圍是 0.0 到 1.0
+    </script>
+</body>
+</html>

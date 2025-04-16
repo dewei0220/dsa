@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人部落格</title>
+    <link rel="stylesheet" href="./styles1.css">
+</head>
+<body>
+    <audio id="myaudio" autoplay="autoplay" loop="loop" preload="auto" src="./aespa 에스파 'Spicy' MV.mp3"></audio>
+    <div class="overlay">  <!-- 增加這一層讓半透明背景覆蓋整個網頁 -->
+        <div class="header">
+            <div class="profile-pic-container">
+                <img src="./me.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="nav-button" onclick="showText('about')">
+                    <img src="./user.png" alt="Icon 1">
+                </a>
+                <a href="#" class="nav-button" onclick="showText('interest')">
+                    <img src="./man.png" alt="Icon 2">
+                </a>
+                <a href="#" class="nav-button" onclick="showText('skill')">
+                    <img src="./book.png" alt="Icon 3">
+                </a>
+        </div>
+    </div>
+    <div class="intro-text" id="text-content">
+        <p>104人力銀行興趣何倫碼是A藝術 x R實做</p>
+        <p>我最有興趣想做的是MIS管理人員</p>
+    </div>
+    <script>
+        // 定義不同按鈕顯示的文字
+        const texts = {
+            about:"104人力銀行興趣何倫碼是 A藝術 x R實做 <br>我最有興趣想做的是MIS管理人員",
+            interest: "<br>工作內容:AWS 雲端服務管理、維運與安全強化  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</br><br>負責維運 AWS ECS (Elastic Container Service)、CodeBuild 自動化建置等核心服務</br><br>執行雲端資源的效能與成本監控</br><br>管理與維護 VPC 安全群組 (Security Group)、網路 ACL 等網路安全設定</br><br>監控 AWS GuardDuty、Security Hub 等安全服務告警，並進行初步應對</br><br>落實 AWS 安全最佳實務與配置檢核</br><br>IDC，內部機房，防火牆管理與維運</br><br>定期資訊設備盤點</br>",
+            skill: "<li type=disc>未來規劃&emsp;  : 先把程式的基礎打好，再去報名實習</li><li type=disc>想學的工具&emsp;  : Excel、PowerPoint、Word</li>"
+        };
+
+        // 點擊按鈕時切換顯示的文字內容
+        function showText(section) {
+            document.getElementById('text-content').innerHTML = "<p>" + texts[section] + "</p>";
+        }
+        // 獲取音頻元素
+        var audioElement = document.getElementById('myaudio');
+        audioElement.volume = 0.7; // 音量範圍是 0.0 到 1.0
+    </script>
+</body>
+</html>
